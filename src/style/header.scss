@@ -155,6 +155,7 @@
         color: $orange;
         @include mQuery(upto-md) {
           padding: 10px;
+          margin: 0 15px;
         }
       }
       .icon-search[aria-expanded='false'],
