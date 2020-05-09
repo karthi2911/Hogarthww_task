@@ -1,0 +1,16 @@
+{
+  "family": "STENGG-MANAGEMENT-SERVICES",
+  "taskRoleArn": "arn:aws:iam::060686542424:role/EcsTaskS3ReadOnlyAccess",
+  "networkMode": "bridge",
+  "containerDefinitions": [
+    {
+      "name": "app",
+      "image": "{{app_image_tag}}",
+      "cpu": 1,
+      "memoryReservation": 32,
+      "essential": true,
+      "readonlyRootFilesystem": false,
+      "environment": [{ "name": "APP_ENV", "value": "{{app_env}}" }]
+    }
+  ]
+}

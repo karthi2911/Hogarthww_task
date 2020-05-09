@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Demo - Karthik</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="favicon.png">
+</head>
+
+<body>
+  <main>
+    <header id="header" class="header" role="banner" aria-label="Site header">
+      <div class="container-fluid">
+        <div class="header-row-1 row px-xl-3">
+          <div class="col col-left d-flex">
+            <div class="d-flex align-items-center">
+              <div class="nav-trigger icon-menu">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row header-row-2">
+          <div class="col d-flex justify-content-center">
+            <a href="#" class="logo"><img src="img/logo.png" alt="" /></a>
+          </div>
+        </div>
+        <nav role="navigation" class="menu-main">
+          <div class="utils" id="utils">
+            <div class="utilIcons">
+              <a class="icon-share" data-toggle="collapse" href="#socialIcons" role="button" aria-expanded="false"
+                aria-controls="socialIcons">
+              </a>
+              <a class="icon-search" data-toggle="collapse" href="#searchBox" role="button" aria-expanded="false"
+                aria-controls="searchBox">
+              </a>
+            </div>
+            <div class="collapse searchBox" data-parent="#utils" id="searchBox">
+              <div class="py-2 px-4">
+                <div class="d-flex justify-content-space-between">
+                  <input type="text" class="form-control">
+                  <button type="button" class="btn btn-danger search-btn">Search</button>
+                </div>
+              </div>
+            </div>
+            <div class="collapse socialIcons" data-parent="#utils" id="socialIcons">
+              <div class="py-2 px-2">
+                <a class="icon-facebook" href="#"></a>
+                <a class="icon-twitter" href="#"></a>
+                <a class="icon-pinterest" href="#"></a>
+                <a class="icon-mail" href="#"></a>
+              </div>
+            </div>
+          </div>
+          <ul class="menu justify-content-center menu-level-0">
+            <li class="menu-item"><a class="is-active" href="#">ENJOY THE JOURNEY</a></li>
+            <li class="menu-item"><a href="#">DISCOVER TUSCANY</a></li>
+            <li class="menu-item"><a href="#">OUR BOTTLES</a></li>
+            <li class="menu-item"><a href="#">LIVE THE JOURNEY</a></li>
+            <li class="menu-item"><a href="#">FINE DINING</a></li>
+            <li class="menu-item"><a href="#">BLOG</a></li>
+            <li class="menu-item"><a href="#">FAQS</a></li>
+            <li class="menu-item"><a href="#">WHERE TO BUY</a></li>
+            <li class="menu-item"><a href="#">CONTACT US</a></li>
+          </ul>
+          <div class="select-country-wrap d-flex px-2">
+            <label class="m-0">Location: | </label>&nbsp;
+            <div class="dropdown select-country">
+              <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Change
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <ul>
+                  <li><a href="">United States (EN)</a></li>
+                  <li><a href="">International (EN)</a></li>
+                  <li><a href="">Italy (IT)</a></li>
+                  <li><a href="">Germany (DE) </a></li>
+                  <li><a href="">United Kingdom (EN)</a></li>
+                  <li><a href="">Spain (ES)</a></li>
+                  <li><a href="">Russia (RU)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container-fluid px-0 col-2-slider">
+      <div class="slider-container row mx-0">
+        <div class="col-md-6 left px-0">
+          <div class="swiper-container swiper-container-bg" id="control" data-position-active="0">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/background-img-1.jpg" />
+                  <img src="./img/background-img-mob-1.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/background-img-2.jpg" />
+                  <img src="./img/background-img-mob-2.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/background-img-3.jpg" />
+                  <img src="./img/background-img-mob-3.jpg" alt="" />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-container swiper-container-text">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="col-md-8 inner-content center-col">
+                  <h2>CRAFTED BY NATURE FOR THE SMOOTHEST TASTE</h2>
+                  <p>The unique flavor profile and mineral composition of Acqua Panna comes from its 14-year journey
+                    through the aquifer beneath the sun-drenched hills of Tuscany and creates the smoothest tasting
+                    water. This unique journey creates a naturally alkaline spring water with a pH of 8.0 or higher.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="col-md-8 inner-content center-col">
+                  <h2>THE SPIRIT OF TUSCANY IN A BOTTLE</h2>
+                  <p>Some come for its world-class art, others for its dreamy countryside and rolling hills. From the
+                    Romans to the Renaissance, artisans and modern fashion, Tuscany beats with culture at every turn. An
+                    extraordinary place steeped in history, Acqua Panna is Tuscany captured in a bottle.</p>
+                </div>
+
+              </div>
+              <div class="swiper-slide">
+                <div class="col-md-8 inner-content center-col">
+                  <h2>A UNIQUE JOURNEY, FROM 1564 TO TODAY</h2>
+                  <p>It all began in 1564 at Villa Panna, a summer retreat for the Medici family who led the way for the
+                    Italian Renaissance. The Medici discovered the source of Acqua Panna water and consistently
+                    transported it 25 miles back to Florence because of the amazing smooth taste found nowhere else.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 right px-0">
+          <div class="swiper-container swiper-container-img">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/right-image-1.jpg" />
+                  <img src="./img/right-image-mob-1.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/right-image-2.jpg" />
+                  <img src="./img/right-image-mob-2.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/right-image-3.jpg" />
+                  <img src="./img/right-image-mob-3.jpg" alt="" />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-overlay">
+        <div class="slide-overlay overlay-item">
+          <img src="./img/bottle-img.png" alt="Plastic Bottle Acqua Panna Natural Mineral Water">
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </main>
+
+</html>

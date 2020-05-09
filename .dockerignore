@@ -1,0 +1,14 @@
+/node_modules
+/build
+/.git
+README.md
+Dockerfile
+*.log
+*.log*
+.vscode
+.DS_Store
+.gitignore
+.editorconfig
+.env
+.gitlab-ci.yml
+.eslintrc.js

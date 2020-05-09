@@ -1,0 +1,42 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  app_name: stengg-management-services
+  app_image_tag: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+  image_tag: $CI_BUILD_REF_NAME
+  image: $CI_REGISTRY_IMAGE
+  registry_pass: $CI_BUILD_TOKEN
+  registry_user: gitlab-ci-token
+  registry: $CI_REGISTRY
+  slack_channel: stengg-dev
+  ecs_definition: config/ecs-task-definition.json
+  ecs_entrypoint: app:80
+
+docker_build_staging:
+  tags:
+    - docker
+  stage: build
+  variables:
+    app_env: staging
+  script:
+    - env
+    - docker login -u $registry_user -p $registry_pass $registry
+    - docker build -t $app_image_tag --build-arg APP_ENV=$app_env .
+    - docker push $app_image_tag
+  only:
+    - master
+
+deploy_staging:
+  image: registry.git.int.krds.com/tools/deploy:edge
+  tags:
+    - deploy
+    - eu
+  stage: deploy
+  variables:
+    app_env: staging
+  script:
+    - deploy-ecs eu-staging
+  only:
+    - master

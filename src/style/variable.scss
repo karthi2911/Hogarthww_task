@@ -1,0 +1,32 @@
+@mixin mQuery($point) {
+  $breakpoints: (
+    upto-xs: 'only screen and (max-width: 380px)',
+    upto-sm: 'only screen and (max-width: 576px)',
+    upto-md: 'only screen and (max-width: 767px)',
+    upto-lg: 'only screen and (max-width: 991px)',
+    upto-xl: 'only screen and (max-width: 1199px)',
+    xs: 'only screen and (min-width: 380px)',
+    sm: 'only screen and (min-width: 576px)',
+    md: 'only screen and (min-width: 768px)',
+    lg: 'only screen and (min-width: 992px)',
+    xl: 'only screen and (min-width: 1200px)',
+    xl-m: 'only screen and (min-width: 1500px)',
+    xxl: 'only screen and (min-width: 1600px)',
+    xxxl: 'only screen and (min-width: 1800px)',
+    touch: 'only screen and (hover: none)',
+    hover: 'only screen and (hover: hover) '
+  );
+  @if map-has-key($breakpoints, $point) {
+    $breakpoint: map-get($breakpoints, $point);
+
+    @media #{$breakpoint} {
+      @content;
+    }
+  } @else {
+    @media only screen and #{$point} {
+      @content;
+    }
+  }
+}
+
+$orange: #ed5b00;
