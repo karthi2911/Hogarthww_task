@@ -28,13 +28,16 @@ function init() {
   };
   var hideAllCollapse = function(e) {
     if (!hasSomeParentTheClass(e.target, 'utils')) {
-      $('#searchBox, #socialIcons').collapse('hide');
+      $('#searchBox, #socialIcons, #country-wrapper').collapse('hide');
       document.removeEventListener('click', hideAllCollapse);
     }
   };
-  $('#searchBox, #socialIcons').on('shown.bs.collapse', function() {
-    document.addEventListener('click', hideAllCollapse);
-  });
+  $('#searchBox, #socialIcons, #country-wrapper').on(
+    'shown.bs.collapse',
+    function() {
+      document.addEventListener('click', hideAllCollapse);
+    }
+  );
   var slider1 = new Swiper('.swiper-container-text', {
     speed: 600,
     freeMode: true,

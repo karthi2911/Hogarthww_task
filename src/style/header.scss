@@ -251,6 +251,7 @@
       }
       .menu-main {
         max-height: 750px;
+        overflow: auto;
         @media only screen and (min-width: 360px) and (max-height: 400px) {
           max-height: 300px !important;
           overflow: auto;
@@ -259,12 +260,19 @@
     }
   }
   .select-country {
-    .dropdown-menu {
+    .country-wrapper {
       background-color: #fdf1e9;
       padding: 20px 0;
       border: none;
       border-radius: 0;
       width: 320px;
+      position: absolute;
+      left: -80px;
+      top: 30px;
+      @include mQuery(upto-md) {
+        position: relative;
+        top: 0;
+      }
       ul {
         margin: 0;
         list-style: none;
@@ -425,6 +433,7 @@
     &.menu-open {
       .menu-main {
         max-height: 750px;
+        overflow: auto;
         @media only screen and (min-width: 360px) and (max-height: 414px) {
           max-height: 300px !important;
           overflow: auto;

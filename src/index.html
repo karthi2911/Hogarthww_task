@@ -32,8 +32,8 @@
             <a href="#" class="logo"><img src="img/logo.png" alt="" /></a>
           </div>
         </div>
-        <nav role="navigation" class="menu-main">
-          <div class="utils" id="utils">
+        <nav role="navigation" class="menu-main" id="utils">
+          <div class="utils">
             <div class="utilIcons">
               <a class="icon-share" data-toggle="collapse" href="#socialIcons" role="button" aria-expanded="false"
                 aria-controls="socialIcons">
@@ -73,11 +73,11 @@
           <div class="select-country-wrap d-flex px-2">
             <label class="m-0">Location: | </label>&nbsp;
             <div class="dropdown select-country">
-              <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-toggle" data-toggle="collapse" href="#country-wrapper" role="button" aria-expanded="false"
+                aria-controls="country-wrapper">
                 Change
               </a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div class="collapse country-wrapper" data-parent="#utils" id="country-wrapper">
                 <ul>
                   <li><a href="">United States (EN)</a></li>
                   <li><a href="">International (EN)</a></li>
@@ -88,6 +88,9 @@
                   <li><a href="">Russia (RU)</a></li>
                 </ul>
               </div>
+              <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+              </div> -->
             </div>
           </div>
         </nav>
