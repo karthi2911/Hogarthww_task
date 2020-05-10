@@ -432,7 +432,7 @@
     }
     &.menu-open {
       .menu-main {
-        max-height: 750px;
+        max-height: 620px;
         overflow: auto;
         @media only screen and (min-width: 360px) and (max-height: 414px) {
           max-height: 300px !important;
@@ -444,6 +444,12 @@
       }
     }
     &.stickey {
+      &.menu-open {
+        .menu-main {
+          max-height: 700px;
+          overflow: auto;
+        }
+      }
       .nav-trigger {
         top: 0;
       }
